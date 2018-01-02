@@ -18,7 +18,7 @@ def date_total(i):
 
 df=pd.read_csv("film_log3.csv",delimiter=';',names=['电影名称','上映日期','下映日期','制作公司','导演','演员','剧情分类','票房','上映城市'])
 for i in xrange(len(df)):
-    if(df.ix[i,0]=='《冲上云霄》'):
+    if(df.ix[i,0]=='《冲上云霄》'and df.ix[i,-1]=='北京'):
         count+=1
         box = df.ix[i, -2]
         box = box.split('）')[-1].strip()
